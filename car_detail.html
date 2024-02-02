@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Data Table</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="car_detail.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Car Data Table</h2>
+    <table id="carTable" class="table table-striped table-bordered" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Battery Capacity</th>
+          <th>Fuel Efficiency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Car data will be populated here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- DataTables JavaScript -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Initialize DataTable
+      $('#carTable').DataTable({
+        "ajax": {
+          "url": "fetch_get_data.php", // Replace with your PHP script that fetches car data
+          "dataSrc": "" // The property name in the JSON response containing the data array (if empty, assumes the root of the JSON response is the array)
+        },
+        "columns": [
+          { "data": "id" },
+          { "data": "type" },
+          { "data": "name" },
+          { "data": "model" },
+          { "data": "year" },
+          { "data": "battery_capa" },
+          { "data": "fuel_eff" }
+        ]
+      });
+    });
+  </script>
+</body>
+</html>

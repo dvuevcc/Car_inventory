@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="response.js" defer></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <title>Car Information</title>
+</head>
+
+<body>
+    <div class="form-section">
+        <div class="form-fields">
+            <p class="para">Please enter your car details below:</p>
+            <form id="car-form" action="connect.php" method="post">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="type">Enter car type</label>
+                        <select id="type" name="car-type">
+                            <option value="">Select type</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Gas">Gas</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="battery-capacity-group" style="display: none;">
+                        <label for="battery_capa">Enter battery capacity(kwh):</label>
+                        <input type="number" id="battery_capa" name="car-battery">
+                    </div>
+                    <div class="form-group" id="fuel-efficiency-group" style="display: none;">
+                        <label for="fuel_eff">Enter fuel efficiency(MPG):</label>
+                        <input type="number" id="fuel_eff" name="car-fuel-efficiency">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Enter Name</label>
+                        <input type="text" id="name" name="car-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Enter Model</label>
+                        <input type="text" id="model" name="car-model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Enter year</label>
+                        <input type="text" id="year" name="car-year">
+                    </div>
+                </fieldset>
+                <div class="form-group" id="buttons">
+                    <input type="submit" value="Submit">
+                    <a href="car_detail.html" class="cardet">Car details</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

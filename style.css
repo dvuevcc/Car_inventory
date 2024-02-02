@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    background-image: url("9862776.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #0000004c;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.5 ease;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+input[type="submit"],
+.cardet {
+    background-color: #473b23;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+}
+
+input[type="submit"]:hover,
+.cardet:hover {
+    background-color: #715c47;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
+
+.cardet:hover {
+    color: white;
+}
+
+/* Button positioning */
+#buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="submit"] {
+    margin-left: 150px;
+}
+
+.cardet {
+    margin-left: 0px;
+    margin-right: 150px;
+}
+
+.para {
+    margin-bottom: 20px;
+    font-size: 18px; 
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+}
+
